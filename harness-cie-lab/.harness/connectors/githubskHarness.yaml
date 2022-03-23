@@ -1,0 +1,23 @@
+connector:
+  name: github-skHarness
+  identifier: githubskHarness
+  description:
+  orgIdentifier: default
+  projectIdentifier: bootcampcisk
+  type: Github
+  spec:
+    url: https://github.com/skHarness
+    validationRepo: harness-cie-lab
+    authentication:
+      type: Http
+      spec:
+        type: UsernameToken
+        spec:
+          username: skHarness
+          tokenRef: harnessbootcamp
+    apiAccess:
+      type: Token
+      spec:
+        tokenRef: harnessbootcamp
+    executeOnDelegate: true
+    type: Account
